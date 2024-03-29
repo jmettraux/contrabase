@@ -2,82 +2,85 @@
 
 MAP = {
 
-  'A' => [ 'abacus', 'alicante' ],
-  'B' => [ 'brother', 'bosphorus' ],
-  'C' => [ 'candid', 'charred' ],
-  'D' => [ 'desert', 'delicacy' ],
-  'E' => [ 'elegy', 'ectoplasm' ],
-  'F' => [ 'fried', 'fire' ],
-  'G' => [ 'goose', 'glib' ],
-  'H' => [ 'hubris', 'hawk' ],
-  'I' => [ 'iconoclast', 'icon' ],
-  'J' => [ 'job', 'jungle' ],
-  'K' => [ 'kill', 'korea' ],
-  'L' => [ 'list', 'larva'  ],
-  'M' => [ 'mole', 'missile' ],
-  'N' => [ 'north', 'nadir' ],
-  'O' => [ 'obsidian', 'orc' ],
-  'P' => [ 'paralyse', 'pride' ],
-  'Q' => [ 'quartz', 'quantum' ],
-  'R' => [ 'rebar', 'rival' ],
-  'S' => [ 'strict', 'syria' ],
-  'T' => [ 'turbine', 'triple' ],
-  'U' => [ 'ural', 'umbrella' ],
-  'V' => [ 'viking', 'vigilant' ],
-  'W' => [ 'wagon', 'window' ],
-  'X' => [ 'xylophone', 'xenon' ],
-  'Y' => [ 'yonder', 'yodel' ],
-  'Z' => [ 'zircon', 'zap' ],
+  'A' => %w[ ask ace apple ],
+  'B' => %w[ brother bat box ],
+  'C' => %w[ candid charred cat ],
+  'D' => %w[ desert delicacy dog ],
+  'E' => %w[ elegy ectoplasm egg ],
+  'F' => %w[ fried fire fox ],
+  'G' => %w[ goose glib gun ],
+  'H' => %w[ hubris hawk hat ],
+  'I' => %w[ iconoclast icon ink ],
+  'J' => %w[ job jungle jam ],
+  'K' => %w[ kill korea key ],
+  'L' => %w[ list larva log ],
+  'M' => %w[ mole missile mug ],
+  'N' => %w[ north nadir net ],
+  'O' => %w[ obsidian orc obsolete ],
+  'P' => %w[ paralyse pride pen ],
+  'Q' => %w[ quartz quantum quill ],
+  'R' => %w[ rebar rival rat ],
+  'S' => %w[ strict syria sun ],
+  'T' => %w[ turbine triple top ],
+  'U' => %w[ ural umbrella urn ],
+  'V' => %w[ viking vigilant van ],
+  'W' => %w[ wagon window wok ],
+  'X' => %w[ xylophone xray ],
+  'Y' => %w[ yonder yodel yarn ],
+  'Z' => %w[ zircon zap zip ],
 
-  'a' => [ 'arabesque', 'ant' ],
-  'b' => [ 'bro', 'bond' ],
-  'c' => [ 'challenge', 'chart' ],
-  'd' => [ 'defy', 'derivative' ],
-  'e' => [ 'error', 'expert' ],
-  'f' => [ 'failure', 'fan' ],
-  'g' => [ 'grid', 'gullible' ],
-  'h' => [ 'honourable', 'ham' ],
-  'i' => [ 'irk', 'igloo' ],
-  'j' => [ 'jerry', 'junk' ],
-  'k' => [ 'kindness', 'kettle' ],
-  'l' => [ 'lamp', 'lecture' ],
-  'm' => [ 'military', 'mettle' ],
-  'n' => [ 'nausea', 'night' ],
-  'o' => [ 'option', 'owl' ],
-  'p' => [ 'parachute', 'price' ],
-  'q' => [ 'quandary', 'quantitative' ],
-  'r' => [ 'rock', 'risk' ],
-  's' => [ 'suffix', 'settle' ],
-  't' => [ 'trip', 'trigger' ],
-  'u' => [ 'utopia', 'universe' ],
-  'v' => [ 'vizir', 'verse' ],
-  'w' => [ 'wonder', 'whale' ],
-  'x' => [ 'xenon', 'xenophobia' ],
-  'y' => [ 'yellow', 'yank' ],
-  'z' => [ 'zeppelin', 'zebra' ],
+  'a' => %w[ ash ant are ],
+  'b' => %w[ bro bond be ],
+  'c' => %w[ challenge chart cow ],
+  'd' => %w[ defy dollar duck ],
+  'e' => %w[ error expert ear ],
+  'f' => %w[ failure fan frog ],
+  'g' => %w[ grid gullible goat ],
+  'h' => %w[ honourable ham hill ],
+  'i' => %w[ is irk igloo ice ],
+  'j' => %w[ jerry junk jug ],
+  'k' => %w[ kindness kettle kite ],
+  'l' => %w[ lamp lecture lion ],
+  'm' => %w[ military mettle map ],
+  'n' => %w[ nausea night nut ],
+  'o' => %w[ option owl original ],
+  'p' => %w[ parachute price pig ],
+  'q' => %w[ quandary quantitative queen ],
+  'r' => %w[ rock risk rose ],
+  's' => %w[ suffix settle shiver ],
+  't' => %w[ trip trigger tea ],
+  'u' => %w[ utopia universe unite usage usher urgent uplift ],
+  'v' => %w[ vizir verse vase ],
+  'w' => %w[ wonder whale wall ],
+  'x' => %w[ xenon xenophobia xmas ],
+  'y' => %w[ yellow yank yacht ],
+  'z' => %w[ zeppelin zebra zilch ],
 
-  '0' => [ 'abacus', 'nil' ],
-  '1' => [ 'bench', 'one' ],
-  '2' => [ 'casino', 'two' ],
-  '3' => [ 'derivative', 'thrice' ],
-  '4' => [ 'energy', 'four' ],
-  '5' => [ 'five', 'pentathlon' ],
-  '6' => [ 'grumpy', 'geezer' ],
-  '7' => [ 'hug', 'seven' ],
-  '8' => [ 'imagination', 'eight' ],
-  '9' => [ 'jurist', 'nine' ],
+  '0' => %w[ abacus nil zero ],
+  '1' => %w[ bench one single ],
+  '2' => %w[ casino two pair ],
+  '3' => %w[ derivative thrice trio ],
+  '4' => %w[ energy four quartet ],
+  '5' => %w[ five pentathlon quintet ],
+  '6' => %w[ grumpy geezer hexagon ],
+  '7' => %w[ hug seven heptagon ],
+  '8' => %w[ imagination eight octagon ],
+  '9' => %w[ jurist nine nonagon ],
 
-  '+' => [ 'plus', 'add' ],
-  '/' => [ 'slash', 'divide' ],
-  '=' => [ 'pad', 'dot' ] }
+  '+' => %w[ plus add amass cross ],
+  '/' => %w[ slash divide under bar ],
+  '=' => %w[ pad dot equal equality ], }
 
 RMAP =
-  MAP.inject({}) { |h, (k, v)| v.each { |vv| h[vv] = k }; h }
+  MAP.inject({}) { |h, (k, v)| v.each { |vv|
+    fail "collision for: #{k} / #{vv}" if h[vv] && h[vv] != k
+    h[vv] = k }; h }
 
 SEPS =
   [ ' ' ] * 50 +
-  [ ', ' ] * 5 +
-  [ '. ' ] * 4 +
+  [ ', ' ] * 7 +
+  [ '. ' ] * 6 +
+  [ ' - ' ] * 3 +
   [ '; ', ' : ', ' / ', '... ' ]
 
 require 'base64'
@@ -98,11 +101,10 @@ def decode(path, i)
 
   File.read(path).split(/\n+/).each do |s|
     s = s.strip; next if s == ''
-    s1 = s.downcase.split(/[.,;:\/ ]+/).inject('') { |ss, e| ss + RMAP[e] }
-puts(Base64.decode64(s1))
-    #File.open("#{path}.#{i}.out", 'wb') do |f|
-      #f.write(Base64.decode64(s1))
-    #end
+    s1 = s.downcase.split(/[-.,;:\/ ]+/).inject('') { |ss, e| ss + RMAP[e] }
+    File.open("#{path}.#{i}.out", 'wb') do |f|
+      f.write(Base64.decode64(s1))
+    end
   end
 end
 
