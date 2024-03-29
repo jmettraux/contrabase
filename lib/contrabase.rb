@@ -82,15 +82,41 @@ SEPS =
 
 require 'base64'
 
+def cap(word, p=0.28)
+
+  Random.rand < p ? word[0, 1].upcase + word[1..-1] : word
+end
+
 def encode(path)
 
   puts; puts(Base64.encode64(File.read(path))
     .split("\n").join('')
-    .each_char.inject('') { |s, c| s + MAP[c].sample + SEPS.sample })
+    .each_char.inject('') { |s, c| s + cap(MAP[c].sample) + SEPS.sample })
 end
 
-ARGV.each do |path|
+def decode(path, i)
 
-  encode(path)
+  File.read(path).split(/\n+/).each do |s|
+    s = s.strip; next if s == ''
+    s1 = s.downcase.split(/[.,;:\/ ]+/).inject('') { |ss, e| ss + RMAP[e] }
+puts(Base64.decode64(s1))
+    #File.open("#{path}.#{i}.out", 'wb') do |f|
+      #f.write(Base64.decode64(s1))
+    #end
+  end
+end
+
+opts, paths = ARGV.partition { |a| a.start_with?('-') }
+
+flags = { dir: 'encode' }
+flags[:dir] = 'decode' if opts.include?('-d') || opts.include?('--decode')
+
+paths.each_with_index do |path, i|
+
+  if flags[:dir] == 'encode'
+    encode(path)
+  else
+    decode(path, i)
+  end
 end
 
